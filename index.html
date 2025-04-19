@@ -3,89 +3,43 @@
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Rush Tag - Play Now!</title>
-   <link rel="icon" type="image/png" href="E_webw.png">
+   <title>Rush Tag</title> <!-- Updated title to focus on Rush Tag -->
+   <link rel="icon" type="image/png" href="E_web.png">
    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
    <link rel="stylesheet" href="styles.css">
-   <meta name="description" content="Your favorite place to discover and play Xapeto games like Rush Tag.">
-   <meta property="og:title" content="Rush Tag Game">
-   <meta property="og:description" content="Discover Rush Tag, a fun multiplayer game.">
-   <meta property="og:image" content="https://raw.githubusercontent.com/SMRmre/E-web/refs/heads/main/E_webw.png">
-   <meta property="og:url" content="https://website-6bd.pages.dev">
+   <meta property="og:title" content="Rush Tag - Xapeto Games"> <!-- Updated OG title -->
+   <meta property="og:description" content="Play Rush Tag and join the community!"> <!-- Updated OG description -->
+   <meta property="og:image" content="https://raw.githubusercontent.com/SMRmre/E-web/refs/heads/main/E_web.png">
+   <meta property="og:url" content="https://a1d4656c.website-6bd.pages.dev">
    <meta property="og:type" content="website">
 </head>
 <body>
     <header>
-        <h1>Welcome to Rush Tag</h1>
+        <h1>Welcome To Xapeto Studios</h1>
         <p>SITE BY: XRE</p>
         <nav>
             <ul>
-                <li><a href="#home">Home</a></li>
                 <li><a href="#games">Games</a></li>
-                <li><a href="#rush-tag-info">Rush Tag Info</a></li>
+                <li><a href="#community">Community</a></li>
             </ul>
         </nav>
     </header>
-
-    <!-- Home Section -->
-    <section id="home" class="home-section">
-        <div class="home-content">
-            <h2>Your Favorite Place to Play Rush Tag</h2>
-            <p>Rush Tag is an exciting multiplayer game that challenges you to tag, race, and outsmart your friends in dynamic, ever-changing arenas. It's fast, it's fun, and it's waiting for you to play!</p>
-            <div class="buttons-container">
-                <!-- Updated Rush Tag Button to say "APPLAB" -->
-                <a href="https://www.meta.com/en-gb/experiences/rush-tag/28736884092623122/" target="_blank" class="btn-applab">APPLAB</a>
-                <a href="https://discord.gg/nPZr4dU4wF" target="_blank" class="btn-discord">Join Discord</a>
-            </div>
-        </div>
-        <img src="rush-tag-image.jpg" alt="Rush Tag" class="home-image">
-    </section>
-
-    <!-- Featured Games Section -->
-    <section id="games" class="games-section">
-        <h2>Featured Games</h2>
+    
+    <section id="games">
+        <h2>Rush Tag - Featured Game</h2> <!-- Updated header to focus on Rush Tag -->
         <div class="game-list">
-            <div class="game-item">
-                <a href="#" id="rush-tag-link" class="game" title="Play Rush Tag and join our Discord">
-                    <img src="rush-tag-image.jpg" alt="Rush Tag" class="game-image">
-                    <h3>Rush Tag</h3>
-                </a>
-                <p class="game-description">
-                    Rush Tag is a fast-paced multiplayer game where players race and tag each other in exciting, dynamic environments. Join the fun, challenge your friends, and discover a new level of speed and strategy.
-                </p>
-            </div>
+            <!-- Game link for Rush Tag -->
+            <a href="https://www.meta.com/en-gb/experiences/rush-tag/28736884092623122/" target="_blank" class="game">Rush Tag</a>
         </div>
     </section>
-
+    
+    <section id="community">
+        <h2>Join the Rush Tag Community</h2> <!-- Updated section header -->
+        <p>Discord Join Link: <a href="https://discord.gg/v6Jj5RCdQC" target="_blank">Join us on Discord</a></p>
+    </section>
+    
     <footer>
         <p>&copy; 2025 Xapeto Studios. All rights reserved.</p>
     </footer>
-
-    <!-- JavaScript to open both links in new tabs -->
-    <script>
-        document.getElementById("rush-tag-link").addEventListener("click", function(event) {
-            event.preventDefault(); // Prevent default anchor behavior
-
-            // Function to open URLs in new tabs
-            const openInNewTab = (url) => {
-                const a = document.createElement('a');
-                a.href = url;
-                a.target = '_blank';
-                a.rel = 'noopener noreferrer';
-                a.style.display = 'none';
-                document.body.appendChild(a);
-                a.click();
-                document.body.removeChild(a);
-            };
-
-            // Open both links
-            openInNewTab("https://www.meta.com/en-gb/experiences/rush-tag/28736884092623122/");
-            openInNewTab("https://discord.gg/v6Jj5RCdQC");
-        });
-    </script>
-
-    <noscript>
-        <p>Please enable JavaScript to access Rush Tag and our Discord server.</p>
-    </noscript>
 </body>
 </html>
