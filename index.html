@@ -7,6 +7,7 @@
    <link rel="icon" type="image/png" href="E_webw.png">
    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
    <link rel="stylesheet" href="styles.css">
+   <meta name="description" content="Your favorite place to discover and play Xapeto games like Rush Tag.">
    <meta property="og:title" content="Xapeto Games">
    <meta property="og:description" content="Explore your favorite games.">
    <meta property="og:image" content="https://raw.githubusercontent.com/SMRmre/E-web/refs/heads/main/E_webw.png">
@@ -27,8 +28,7 @@
     <section id="games">
         <h2>Featured Games</h2>
         <div class="game-list">
-            <!-- Update the href here to the desired URL and add an id for JavaScript targeting -->
-            <a href="#" id="rush-tag-link" class="game">Rush Tag</a>
+            <a href="#" id="rush-tag-link" class="game" title="Play Rush Tag and join our Discord">Rush Tag</a>
         </div>
     </section>
     
@@ -36,14 +36,31 @@
         <p>&copy; 2025 Xapeto Studios. All rights reserved.</p>
     </footer>
 
-    <!-- JavaScript to open both links -->
+    <!-- JavaScript to open both links in new tabs -->
     <script>
         document.getElementById("rush-tag-link").addEventListener("click", function(event) {
-            event.preventDefault(); // Prevent the default action of the link
-            // Open both links in new tabs
-            window.open("https://www.meta.com/en-gb/experiences/rush-tag/28736884092623122/", "_blank");
-            window.open("https://discord.gg/v6Jj5RCdQC", "_blank");
+            event.preventDefault(); // Prevent default anchor behavior
+
+            // Function to open URLs in new tabs
+            const openInNewTab = (url) => {
+                const a = document.createElement('a');
+                a.href = url;
+                a.target = '_blank';
+                a.rel = 'noopener noreferrer';
+                a.style.display = 'none';
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+            };
+
+            // Open both links
+            openInNewTab("https://www.meta.com/en-gb/experiences/rush-tag/28736884092623122/");
+            openInNewTab("https://discord.gg/v6Jj5RCdQC");
         });
     </script>
+
+    <noscript>
+        <p>Please enable JavaScript to access Rush Tag and our Discord server.</p>
+    </noscript>
 </body>
 </html>
