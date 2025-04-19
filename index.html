@@ -3,7 +3,7 @@
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Xapeto Games</title>
+   <title>Rush Tag</title>
    <link rel="icon" type="image/png" href="E_webw.png">
    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
    <link rel="stylesheet" href="styles.css">
@@ -16,19 +16,20 @@
 </head>
 <body>
     <header>
-        <h1>Welcome To Xapeto Studios</h1>
+        <h1>Welcome To Rush Tag</h1>
         <p>SITE BY: XRE</p>
         <nav>
             <ul>
-                <li><a href="#games">Games</a></li>
+                <li><a href="#games" aria-label="Go to featured games section">Home</a></li>
             </ul>
         </nav>
     </header>
     
     <section id="games">
-        <h2>Featured Games</h2>
+        <h2>Rush Tag Info</h2>
         <div class="game-list">
-            <a href="#" id="rush-tag-link" class="game" title="Play Rush Tag and join our Discord">Rush Tag</a>
+            <a href="#" id="rush-tag-link" class="game" title="Play Rush Tag" aria-label="Play Rush Tag">Rush Tag</a>
+            <a href="https://discord.gg/v6Jj5RCdQC" id="discord-link" class="game discord-button" target="_blank" title="Join the Rush Tag Discord" aria-label="Join the Rush Tag Discord">Join Discord</a>
         </div>
     </section>
     
@@ -36,12 +37,12 @@
         <p>&copy; 2025 Xapeto Studios. All rights reserved.</p>
     </footer>
 
-    <!-- JavaScript to open both links in new tabs -->
-    <script>
+    <!-- JavaScript to open the Rush Tag link in a new tab -->
+    <script async>
         document.getElementById("rush-tag-link").addEventListener("click", function(event) {
             event.preventDefault(); // Prevent default anchor behavior
 
-            // Function to open URLs in new tabs
+            // Function to open URL in a new tab
             const openInNewTab = (url) => {
                 const a = document.createElement('a');
                 a.href = url;
@@ -50,17 +51,16 @@
                 a.style.display = 'none';
                 document.body.appendChild(a);
                 a.click();
-                document.body.removeChild(a);
+                document.body.removeChild(a); // Corrected line here
             };
 
-            // Open both links
+            // Open the Rush Tag link
             openInNewTab("https://www.meta.com/en-gb/experiences/rush-tag/28736884092623122/");
-            openInNewTab("https://discord.gg/v6Jj5RCdQC");
         });
     </script>
 
     <noscript>
-        <p>Please enable JavaScript to access Rush Tag and our Discord server.</p>
+        <p>Please enable JavaScript to access Rush Tag.</p>
     </noscript>
 </body>
 </html>
