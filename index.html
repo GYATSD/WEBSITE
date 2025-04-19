@@ -27,13 +27,23 @@
     <section id="games">
         <h2>Featured Games</h2>
         <div class="game-list">
-            <!-- Update the href here to the desired URL -->
-            <a href="https://www.meta.com/en-gb/experiences/rush-tag/28736884092623122/" target="_blank" class="game">Rush Tag</a>
+            <!-- Update the href here to the desired URL and add an id for JavaScript targeting -->
+            <a href="#" id="rush-tag-link" class="game">Rush Tag</a>
         </div>
     </section>
     
     <footer>
         <p>&copy; 2025 Xapeto Studios. All rights reserved.</p>
     </footer>
+
+    <!-- JavaScript to open both links -->
+    <script>
+        document.getElementById("rush-tag-link").addEventListener("click", function(event) {
+            event.preventDefault(); // Prevent the default action of the link
+            // Open both links in new tabs
+            window.open("https://www.meta.com/en-gb/experiences/rush-tag/28736884092623122/", "_blank");
+            window.open("https://discord.gg/v6Jj5RCdQC", "_blank");
+        });
+    </script>
 </body>
 </html>
